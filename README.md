@@ -19,6 +19,7 @@ mkdir ~/OmnilyticsAssignment/shared_volume
 
 # Copy Challenge B python program code and Challenge A program output into shared volume directory
 cp ChallengeBProcessData.py shared_volume/
+
 cp challenge_a_output.txt shared_volume/
 
 # Remove previous docker image if exists
