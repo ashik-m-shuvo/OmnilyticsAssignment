@@ -14,7 +14,16 @@ cd ~/OmnilyticsAssignment
 # Execute Challenge A program
 python ChallengeAGenerateData.py
 
-# Creating shared volume between host and docker_container if exists
+# Check Challenge A program output in host
+less challenge_a_output.txt
+
+# Execute Challenge B program
+python ChallengeBProcessData.py
+
+# Check Challenge B program output in host
+less challenge_b_output.txt
+
+# For Challenge C, creating shared volume between host and docker_container if not exists
 mkdir ~/OmnilyticsAssignment/shared_volume
 
 # Copy Challenge B python program code and Challenge A program output into shared volume directory
@@ -28,7 +37,7 @@ docker rmi -f omnilytics_image
 # Create/build docker image
 docker build -t omnilytics_image .
 
-# Remove previous docker container if exists :
+# Remove previous docker container if exists
 docker rm -f omnilytics_container
 
 # Run docker container
